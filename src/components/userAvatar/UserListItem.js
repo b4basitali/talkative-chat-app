@@ -27,14 +27,14 @@ const UserListItem = ({ handleFunction, searched_user }) => {
         mr={2}
         size="sm"
         cursor="pointer"
-        name={searched_user.name}
-        src={searched_user.pic}
+        name={searched_user?.name}
+        src={searched_user?.pic}
       />
       <Box>
-        <Text>{searched_user.name}</Text>
+        <Text>{searched_user?.name}</Text>
         <Text fontSize="xs">
           <b>Email : </b>
-          {searched_user.email}
+          {searched_user?.email}
         </Text>
       </Box>
     </Box>

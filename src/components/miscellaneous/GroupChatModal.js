@@ -55,7 +55,7 @@ const GroupChatModal = ({ children }) => {
       setLoading(true);
       const config = {
         headers: {
-          Authorization: `Bearer ${user.token}`,
+          Authorization: `Bearer ${user?.token}`,
         },
       };
       const { data } = await axios.get(
@@ -173,11 +173,11 @@ const GroupChatModal = ({ children }) => {
             ) : (
               searchResult
                 ?.slice(0, 4)
-                .map((user) => (
+                .map((searched_user) => (
                   <UserListItem
-                    key={user._id}
-                    user={user}
-                    handleFunction={() => handleGroup(user)}
+                    key={searched_user._id}
+                    searched_user={searched_user}
+                    handleFunction={() => handleGroup(searched_user)}
                   />
                 ))
             )}
