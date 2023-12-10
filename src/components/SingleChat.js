@@ -16,7 +16,7 @@ import io from "socket.io-client";
 import UpdateGroupChatModal from "./miscellaneous/UpdateGroupChatModal";
 import { ChatState } from "../Context/ChatProvider";
 
-const ENDPOINT = "https://talkative-chat-app-api.vercel.app"; // "http://localhost:5000"; -> After deployment
+const ENDPOINT = "/"; // "http://localhost:5000"; -> After deployment
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
